@@ -6,8 +6,8 @@ TAG_TEMP=$2
 TAG=${TAG_TEMP:=1.0}
 TEMP=$3
 PUSH=${TEMP:=-NO}
-IMAGE=docker-bakery-system/${COMPONENT_NAME}:${TAG}
-
+# IMAGE=docker-bakery-system/${COMPONENT_NAME}:${TAG}
+IMAGE=poojan23/docker-bakery-system_${COMPONENT_NAME}:${TAG}
 
 function ping(){
     echo "Building from docker file path::"
@@ -15,14 +15,14 @@ function ping(){
 function check_component() {
    echo "COMPONENT_NAME: " ${COMPONENT_NAME}
   case ${COMPONENT_NAME} in
-    test-component1_repo4)
-    DOCKERFILE_PATH=./components_repo4/test-component1_repo4/Dockerfile
+    repo4-component1)
+    DOCKERFILE_PATH=./components_repo3/test-component1_repo4/Dockerfile
     ;;
-    test-component2_repo4)
-    DOCKERFILE_PATH=./components_repo4/test-component2_repo4/Dockerfile
+    repo4-component2)
+    DOCKERFILE_PATH=./components_repo3/test-component2_repo4/Dockerfile
     ;;
-    test-component3_repo4)
-    DOCKERFILE_PATH=./components_repo4/test-component3_repo4/Dockerfile
+    repo4-component3)
+    DOCKERFILE_PATH=./components_repo3/test-component3_repo4/Dockerfile
     ;;
     *)
       echo "Invalid component" && exit 1 ;;
