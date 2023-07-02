@@ -16,13 +16,13 @@ function check_component() {
    echo "COMPONENT_NAME: " ${COMPONENT_NAME}
   case ${COMPONENT_NAME} in
     repo4-component1)
-    DOCKERFILE_PATH=./components_repo3/test-component1_repo4/Dockerfile
+    DOCKERFILE_PATH=./components_repo4/test-component1_repo4/Dockerfile
     ;;
     repo4-component2)
-    DOCKERFILE_PATH=./components_repo3/test-component2_repo4/Dockerfile
+    DOCKERFILE_PATH=./components_repo4/test-component2_repo4/Dockerfile
     ;;
     repo4-component3)
-    DOCKERFILE_PATH=./components_repo3/test-component3_repo4/Dockerfile
+    DOCKERFILE_PATH=./components_repo4/test-component3_repo4/Dockerfile
     ;;
     *)
       echo "Invalid component" && exit 1 ;;
